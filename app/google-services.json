@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "127417497425",
+    "firebase_url": "https://tinderdev-bcf2d.firebaseio.com",
+    "project_id": "tinderdev-bcf2d",
+    "storage_bucket": "tinderdev-bcf2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127417497425:android:888c8453effa285d0c8570",
+        "android_client_info": {
+          "package_name": "com.example.tinderdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127417497425-u3d2rjiedns9qvvlofbaq8oqss80dqv2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tinderdev",
+            "certificate_hash": "e6db15727131042db6a6afef6432559c92741ecf"
+          }
+        },
+        {
+          "client_id": "127417497425-g9q67vk7aapegd0hlr1fnrgi36mn9n2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVE7yOifXEhaGubl-UpYyJkREcjtqClTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127417497425-g9q67vk7aapegd0hlr1fnrgi36mn9n2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

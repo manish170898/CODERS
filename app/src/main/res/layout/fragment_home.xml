@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll1">
+            <TextView
+                android:id="@+id/noUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO MORE USERS TO SHOW"
+                android:textSize="25sp"
+                android:fontFamily="@font/aldrich"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:visibility="gone"
+                android:textColor="#000"/>
+            <com.lorentzos.flingswipe.SwipeFlingAdapterView
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ll1"
+                android:background="#FFFFFF"
+                app:rotation_degrees="15.5"
+                tools:context=".MyActivity" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/codee" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/monoton"
+                android:text="CODERS"
+                android:textColor="#000"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</FrameLayout>

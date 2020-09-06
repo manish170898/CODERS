@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat.ChatActivity">
+    <RelativeLayout
+        android:id="@+id/layouta"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="10sp"
+        android:background="@drawable/b_layer"
+        android:layout_marginBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myCardView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="50dp"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/profileImage"
+                android:src="@drawable/codee"
+                android:layout_centerVertical="true"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/myCardView"
+            android:fontFamily="@font/aldrich"
+            android:includeFontPadding="false"
+            android:inputType="textCapWords"
+            android:textColor="#000000"
+            android:text="Name"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_more"
+                android:layout_toRightOf="@+id/full_name" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollVIewChat"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layouta"
+        android:layout_above="@+id/sendLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"/>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/sendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutmessege"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/messege"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Messege"
+                android:focusedByDefault="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="textCapSentences"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/aldrich"
+                android:drawableStart="@drawable/ic_password"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:backgroundTint="#fece2f"
+            android:layout_margin="3dp"
+            app:backgroundTint="#000"
+            android:elevation="1dp"
+            app:elevation="1dp"
+            android:src="@drawable/ic_send"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".UsersCommon.UserDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bungee_shade"
+            android:text="ENTER USER DETAILS"
+            android:textSize="25sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:textColorHint="#000"
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawablePadding="5dp"
+                android:inputType="text|textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginRight="5dp"
+                android:hint="D.O.B"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:drawableStart="@drawable/ic_dob"
+                    android:drawablePadding="5dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/agel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Age"
+                android:textColorHint="#000"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableStart="@drawable/ic_age"
+                    android:drawablePadding="5dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MALE"
+                android:fontFamily="@font/acme"
+                android:layout_marginRight="15dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:text="FEMALE"/>
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Select your Country"
+            android:textColorHint="#000">
+
+            <AutoCompleteTextView
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionThreshold="1"
+                android:textColorHint="#000"
+                android:inputType="textCapWords|text"
+                android:drawableStart="@drawable/ic_country"
+                android:drawablePadding="5dp"
+                android:paddingStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City/Town"
+            android:textColorHint="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_city"
+                android:drawablePadding="5dp"
+                android:inputType="text|textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Coding Languages known"
+            app:helperText="Type names of languages followed by a comma(,)"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000">
+            <MultiAutoCompleteTextView
+                android:id="@+id/Coding"
+                android:layout_width="match_parent"
+                android:drawableStart="@drawable/ic_code"
+                android:drawablePadding="5dp"
+                android:inputType="textCapWords|text"
+                android:paddingStart="12dp"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Currently Interested In"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_current"
+                android:drawablePadding="5dp"
+                android:inputType="text|textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:fontFamily="@font/acme"
+            android:background="#000"
+            android:layout_marginTop="10dp"
+            android:transitionName="text4"
+            android:textColor="#fff"
+            android:id="@+id/next"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

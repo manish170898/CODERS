@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tinderdev">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/codee"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/codee"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".OneNotification.ViewProfile"></activity>
+        <activity android:name=".UsersCommon.Settings" />
+        <activity android:name=".Chat.ChatActivity" />
+        <activity android:name=".UsersCommon.UserDetails" />
+        <activity android:name=".UsersCommon.ForgotPassword" />
+        <activity android:name=".UsersCommon.EmailVerification" />
+        <activity android:name=".SplashScreen.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UsersCommon.EditProfile" />
+        <activity android:name=".UsersCommon.RegistrationActivity" />
+        <activity android:name=".UsersCommon.Choose_Login_Registration" />
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>

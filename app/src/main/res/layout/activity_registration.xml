@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsersCommon.RegistrationActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/codee"
+        android:transitionName="logo_image"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/texta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionName="logo_name"
+        android:text="Welcome"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/bungee_shade"/>
+    <TextView
+        android:id="@+id/textb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up to start your new Journey"
+        android:transitionName="text1"
+        android:fontFamily="@font/acme"
+        android:textSize="18sp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="#000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:transitionName="text2"
+                android:id="@+id/email"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColorHint="#000"
+            app:passwordToggleEnabled="true"
+            app:helperText="Password should contain more than 4 characters, a digit, no white spaces and atleast 1 special character"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="5dp"
+                android:transitionName="text3"
+                android:id="@+id/password"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:fontFamily="@font/acme"
+        android:background="#000"
+        android:transitionName="text4"
+        android:textColor="#fff"
+        android:id="@+id/register"/>
+
+    <Button
+        android:id="@+id/go_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:transitionName="text5"
+        android:fontFamily="@font/acme"
+        android:text="Already Have an account ?LogIn"/>
+
+</LinearLayout>
