@@ -104,7 +104,6 @@ public class HomeFragment extends Fragment {
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
-                Toast.makeText(getActivity(), "Clicked!",Toast.LENGTH_SHORT).show();
             }
         });
         return root;
@@ -126,7 +125,10 @@ public class HomeFragment extends Fragment {
                                 profileImageUrl = snapshot.child("profileimageUrl").getValue().toString();
                             }
                         }
-                        Cards item = new Cards(snapshot.getKey(), snapshot.child("Name").getValue().toString(), profileImageUrl);
+                        Cards item = new Cards(snapshot.getKey(), snapshot.child("Name").getValue().toString(), profileImageUrl,
+                                snapshot.child("Interest").getValue().toString(),
+                                snapshot.child("CodingLanguages").getValue().toString(),
+                                snapshot.child("Age").getValue().toString());
                         rowitems.add(item);
                         arrayAdapter.notifyDataSetChanged();
                     }
